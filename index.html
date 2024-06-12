@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco 4 en línea - TP integrador UADE</title>
+    <link rel="stylesheet" href="./styles/juego.css" />
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+</head>
+<body>
+    <header>
+        <div>
+            <a id="logoLink" href="https://guillermogerstner.github.io/Trabajo-Integrador-grupal/index.html" target="_blank">
+                <img id="logo" src="./img/logo.png" alt="logo" />
+            </a>
+        </div>
+    </header>
+    <h1>Eco 4 en línea</h1>
+    
+    <main>
+        <section class="FourInLine">
+            <section class="actualGame">
+                <div>
+                    <div class="timer game">
+                        <div>
+                            <p id="counterMin"></p>
+                        </div>
+                        <p>:</p>
+                        <div>
+                            <p id="counterSeg"></p>
+                        </div>
+                    </div>
+                    <a id="restartButton">RESTART</a>
+                </div>
+                <canvas id="canvas" width="1150" height="580">
+                </canvas>
+            </section>
+            <section class="theGame">
+                <div class="gameOnLine">
+                    <img src="img/gameDetail/Game.png" alt="Eco 4 en línea">
+                </div>
+                <form id="gameForm" action="">
+
+                    <h2>Elige tu juego</h2>
+                    <select name="gameType" id="gameType">
+                        <option value="7" selected>4 en línea</option>
+                        <option value="8">5 en línea</option>
+                        <option value="9">6 en línea</option>
+                        <option value="10">7 en línea</option>
+                        <option value="11">8 en línea</option>
+                    </select>
+
+                    <div class="playerSetter">
+                        <div>
+                            <h3>Jugador 1</h3>
+                            <label for="name1">Nombre</label>
+                            <input type="text" id="name1" name="name1">
+
+                            <div>
+                                <input type="radio" name="char1" id="char1-10"
+                                    value="img/gameDetail/characters/Chip (9).png">
+                                <label for="char1-10"><img src="img/gameDetail/characters/Chip (9).png"></label>
+
+                                <input type="radio" name="char1" id="char1-9"
+                                    value="img/gameDetail/characters/Chip (8).png">
+                                <label for="char1-9"><img src="img/gameDetail/characters/Chip (8).png"></label>
+
+                                <input type="radio" name="char1" id="char1-8"
+                                    value="img/gameDetail/characters/Chip (7).png">
+                                <label for="char1-8"><img src="img/gameDetail/characters/Chip (7).png"></label>
+
+                                <input type="radio" name="char1" id="char1-7"
+                                    value="img/gameDetail/characters/Chip (6).png">
+                                <label for="char1-7"><img src="img/gameDetail/characters/Chip (6).png"></label>
+
+                                <input type="radio" name="char1" id="char1-6"
+                                    value="img/gameDetail/characters/Chip (5).png">
+                                <label for="char1-6"><img src="img/gameDetail/characters/Chip (5).png"></label>
+
+                                <input type="radio" name="char1" id="char1-5"
+                                    value="img/gameDetail/characters/Chip (4).png">
+                                <label for="char1-5"><img src="img/gameDetail/characters/Chip (4).png"></label>
+
+                                <input type="radio" name="char1" id="char1-4"
+                                    value="img/gameDetail/characters/Chip (3).png">
+                                <label for="char1-4"><img src="img/gameDetail/characters/Chip (3).png"></label>
+
+                                <input type="radio" name="char1" id="char1-3"
+                                    value="img/gameDetail/characters/Chip (2).png">
+                                <label for="char1-3"><img src="img/gameDetail/characters/Chip (2).png"></label>
+
+                                <input type="radio" name="char1" id="char1-2"
+                                    value="img/gameDetail/characters/Chip (1).png">
+                                <label for="char1-2"><img src="img/gameDetail/characters/Chip (1).png"></label>
+
+                                <input type="radio" name="char1" id="char1-1"
+                                    value="img/gameDetail/characters/Chip.png">
+                                <label for="char1-1"><img src="img/gameDetail/characters/Chip.png"></label>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>Jugador 2</h3>
+                            <label for="name2">Nombre</label>
+                            <input type="text" id="name2" name="name2">
+
+                            <div>
+                                <input type="radio" name="char2" id="char2-10"
+                                    value="img/gameDetail/characters/Chip (9).png">
+                                <label for="char2-10"><img src="img/gameDetail/characters/Chip (9).png"></label>
+
+                                <input type="radio" name="char2" id="char2-9"
+                                    value="img/gameDetail/characters/Chip (8).png">
+                                <label for="char2-9"><img src="img/gameDetail/characters/Chip (8).png"></label>
+
+                                <input type="radio" name="char2" id="char2-8"
+                                    value="img/gameDetail/characters/Chip (7).png">
+                                <label for="char2-8"><img src="img/gameDetail/characters/Chip (7).png"></label>
+
+                                <input type="radio" name="char2" id="char2-7"
+                                    value="img/gameDetail/characters/Chip (6).png">
+                                <label for="char2-7"><img src="img/gameDetail/characters/Chip (6).png"></label>
+
+                                <input type="radio" name="char2" id="char2-6"
+                                    value="img/gameDetail/characters/Chip (5).png">
+                                <label for="char2-6"><img src="img/gameDetail/characters/Chip (5).png"></label>
+
+                                <input type="radio" name="char2" id="char2-5"
+                                    value="img/gameDetail/characters/Chip (4).png">
+                                <label for="char2-5"><img src="img/gameDetail/characters/Chip (4).png"></label>
+
+                                <input type="radio" name="char2" id="char2-4"
+                                    value="img/gameDetail/characters/Chip (3).png">
+                                <label for="char2-4"><img src="img/gameDetail/characters/Chip (3).png"></label>
+
+                                <input type="radio" name="char2" id="char2-3"
+                                    value="img/gameDetail/characters/Chip (2).png">
+                                <label for="char2-3"><img src="img/gameDetail/characters/Chip (2).png"></label>
+
+                                <input type="radio" name="char2" id="char2-2"
+                                    value="img/gameDetail/characters/Chip (1).png">
+                                <label for="char2-2"><img src="img/gameDetail/characters/Chip (1).png"></label>
+
+                                <input type="radio" name="char2" id="char2-1"
+                                    value="img/gameDetail/characters/Chip.png">
+                                <label for="char2-1"><img src="img/gameDetail/characters/Chip.png"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="img/gameDetail/Play.svg" id="btnGame" alt="Play button">
+                    </div>
+                </form>
+            </section>
+        </section>
+    </main>
+      
+      <div id="desc">
+        <h2>Sobre el Juego:</h2>
+        <p class="descItem">El objetivo del Eco 4 En Línea consiste en colocar cuatro fichas en una fila contínua vertical, horizontal o diagonalmente. Se juega sobre un tablero de 8x8 casillas que al empezar está vacío. Ambos jugadores sitúan sus fichas (una por movimiento) en el tablero.</p>
+        <h2>Reglas:</h2>
+        <ul>
+            <li class="descItem">Túrnense para dejar caer fichas en las columnas para obtener cuatro en fila.</li>
+            <li class="descItem">Para soltar una ficha, haga clic en una columna del tablero o haga clic y arrastre su ficha a una columna.</li>
+            <li class="descItem">Conecta 4 piezas horizontal, vertical o diagonalmente para ganar el partido.</li>
+        </ul>
+        <h2>¿Cómo te gustaría ser parte?</h2>
+        <div class="charDetail">
+            <div>
+                <img id="char1" src="img/gameDetail/characters/Chip.png" alt="Planeta">
+                <p>Planeta</p>
+            </div>
+            <div>
+                <img id="char2" src="img/gameDetail/characters/Chip (1).png" alt="Reciclaje">
+                <p>Reciclaje</p>
+            </div>
+            <div>
+                <img id="char3" src="img/gameDetail/characters/Chip (2).png" alt="Eficiencia">
+                <p>Eficiencia</p>
+            </div>
+            <div>
+                <img id="char4" src="img/gameDetail/characters/Chip (3).png" alt="Bosque">
+                <p>Bosque</p>
+            </div>
+            <div>
+                <img id="char5" src="img/gameDetail/characters/Chip (4).png" alt="Segmentación">
+                <p>Segmentación</p>
+            </div>
+            <div>
+                <img id="char6" src="img/gameDetail/characters/Chip (5).png" alt="Reforestación">
+                <p>Reforestación</p>
+            </div>
+            <div>
+                <img id="char7" src="img/gameDetail/characters/Chip (6).png" alt="Hidroeléctrica">
+                <p>Hidroeléctrica</p>
+            </div>
+            <div>
+                <img id="char8" src="img/gameDetail/characters/Chip (7).png" alt="Eólica">
+                <p>Eólica</p>
+            </div>
+            <div>
+                <img id="char9" src="img/gameDetail/characters/Chip (8).png" alt="Solar">
+                <p>Solar</p>
+            </div>
+            <div>
+                <img id="char10" src="img/gameDetail/characters/Chip (9).png" alt="Ahorro">
+                <p>Ahorro</p>
+            </div>
+        </div>
+        <h2>GitHub:</h2>
+        <p class="descItem">GitHub: <a href="" target="_blank">Enlace al Repo</a></p>
+      </div>
+      </main>
+      <footer>
+        Derechos reservados - Sitio desarrollado para uso educativo - Diseño y
+        desarrollo Web - UADE - 2024
+      </footer>
+
+    <script type="text/javascript" src="js/4inLine/Ficha.js"></script>
+    <script type="text/javascript" src="js/4inLine/Jugador.js"></script>
+    <script type="text/javascript" src="js/4inLine/Juego.js"></script>
+    <script type="text/javascript" src="js/4inLine/main.js"></script>
+</body>
+</html>
