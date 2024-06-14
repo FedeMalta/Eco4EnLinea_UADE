@@ -32,22 +32,15 @@
                     </div>
                     <a id="restartButton">RESTART</a>
                 </div>
-                <canvas id="canvas" width="1150" height="580">
+                <canvas id="canvas" class="responsive-canvas">
                 </canvas>
             </section>
             <section class="theGame">
-                <div class="gameOnLine">
-                    <img src="img/gameDetail/Game.png" alt="Eco 4 en línea">
-                </div>
                 <form id="gameForm" action="">
 
-                    <h2>Elige tu juego</h2>
+                    <h2>START</h2>
                     <select name="gameType" id="gameType">
                         <option value="7" selected>4 en línea</option>
-                        <option value="8">5 en línea</option>
-                        <option value="9">6 en línea</option>
-                        <option value="10">7 en línea</option>
-                        <option value="11">8 en línea</option>
                     </select>
 
                     <div class="playerSetter">
@@ -146,6 +139,7 @@
                             </div>
                         </div>
                     </div>
+                    <p id="errorPersonajes"></p>
                     <div>
                         <img src="img/gameDetail/Play.svg" id="btnGame" alt="Play button">
                     </div>
@@ -207,7 +201,7 @@
             </div>
         </div>
         <h2>GitHub:</h2>
-        <p class="descItem">GitHub: <a href="" target="_blank">Enlace al Repo</a></p>
+        <p class="descItem">GitHub: <a href="https://github.com/FedeMalta/Eco4EnLinea_UADE" target="_blank">Enlace al Repo</a></p>
       </div>
       </main>
       <footer>
@@ -219,5 +213,6 @@
     <script type="text/javascript" src="js/4inLine/Jugador.js"></script>
     <script type="text/javascript" src="js/4inLine/Juego.js"></script>
     <script type="text/javascript" src="js/4inLine/main.js"></script>
+    <script type="text/javascript" src="js/canvasResponsive.js"></script>
 </body>
 </html>

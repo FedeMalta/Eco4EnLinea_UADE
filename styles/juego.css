@@ -39,7 +39,7 @@ h1 {
   margin: 0 auto;
   width: fit-content;
   font-size: 40px;
-  margin-top: -60px;
+  margin-top: -20px;
   margin-bottom: 10px;
 }
 
@@ -68,11 +68,15 @@ a:hover {
 }
 
 #desc {
-  width: 80%;
   margin: 0 auto;
   margin-top: 60px;
   margin-bottom: 100px;
   text-align: left;
+  padding-left: 5%;
+}
+
+#desc h2, #desc p, #desc ul {
+  padding-right: 5%;
 }
 
 .descItem {
@@ -87,11 +91,23 @@ a:hover {
 .charDetail {
   display: flex;
   justify-content: space-between;
-  overflow: scroll;
+  overflow-x: scroll;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .charDetail::-webkit-scrollbar {
-  display: none;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.charDetail::-webkit-scrollbar-thumb {
+  background: #ecf8d6;
+  border-radius: 3px;
+}
+
+.charDetail::-webkit-scrollbar-track {
+  background: white;
 }
 
 .charDetail>div {
@@ -104,8 +120,11 @@ a:hover {
 
 .charDetail div p {
   padding: 4px 0;
-  width: 105px;
   text-align: center;
+}
+
+.charDetail div:first-child {
+  margin-left: 0;
 }
 
 input[type="radio"] {
@@ -114,15 +133,16 @@ input[type="radio"] {
 
 /*Juego*/
 
+
 .FourInLine {
   position: relative;
-  height: 770px;   
+  height: 580px;   
 }
 
 .actualGame {
   margin: 0 30px;
   position: absolute; 
-  height: 700px; 
+  height: 580px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -131,6 +151,7 @@ input[type="radio"] {
   margin-left: auto; 
   margin-right: auto; 
   width: 100%;
+  visibility: hidden;
 }
 
 .actualGame canvas {
@@ -140,6 +161,7 @@ input[type="radio"] {
   margin-right: auto;
   display: block;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .actualGame>div{
@@ -150,7 +172,7 @@ input[type="radio"] {
 .theGame {
   position: absolute;
   width: 100%;
-  height: 700px;
+  height: 580px;
 }
 
 .gameOnLine {
@@ -167,10 +189,10 @@ input[type="radio"] {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 60%;
+  width: 70%;
   position: absolute;
-  left: 20%;
-  margin-top: 100px;
+  left: 15%;
+  margin-top: 40px;
   align-items: center;
   border-radius: 10px;
   background-color: #ecf8d6;
@@ -178,12 +200,17 @@ input[type="radio"] {
 
 #gameForm select {
   font-family: "Poppins", sans-serif;
-  padding: 10px;
   background-color: #d9cbff;
+  visibility: hidden;
 }
 
 #gameForm h2 {
-  padding: 30px;
+  padding: 30px 30px 0px 30px;
+}
+
+#errorPersonajes {
+  color: red;
+  font-weight: 500;
 }
 
 #btnGame {
@@ -200,6 +227,7 @@ input[type="radio"] {
 
 .playerSetter{
   display: flex;
+  flex-direction: column;
   width: 100%;
   justify-content: space-around;
 }
@@ -217,7 +245,7 @@ input[type="radio"] {
 
 .playerSetter>div>div{
   padding-top: 20px;
-  height: 40px;
+  height: 70px;
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;
@@ -307,20 +335,24 @@ input[type="radio"] {
 }
 
 
-@media (max-width: 750px) {
+@media (min-width: 750px) {
   h1 {
     margin-top: 0px;
   }
 
   #desc {
-    width: 90%;
     margin: 0 auto;
-    margin-top: 60px;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   .descItem {
     font-size: 16px;
     max-width: 100%;
+  }
+
+  .playerSetter{
+    flex-direction: row;
   }
 
 }

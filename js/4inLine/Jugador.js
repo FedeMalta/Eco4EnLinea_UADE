@@ -124,16 +124,28 @@ class Jugador {
         let counter = 0;
 
         for (let i = 0; i < rows; i++) {
+            let chipLocationY = 40;
+            let chipLocationX = 50;
+            let chipLocationAux = 10;
+            if (board.width < 650) {
+                chipLocationX = 0;
+                chipLocationY = 0;
+                chipLocationAux = 400;
+            }
             for (let index = 0; index < max; index++) {
                 if (counter < cant) {
+                    if (board.width > 650) {
+                        y += chipLocationY + chipLocationAux;
+                    } else {
+                        y = chipLocationY + chipLocationAux;
+                    }
                     let chip = new Ficha(x, y, 24, this.img);
-                    y += 40;
                     this.chips.push(chip);
                     counter++;
                 } else return;
             }
-            y = 50;
-            x += 55;
+            y = chipLocationY + chipLocationAux;
+            x += chipLocationX;
         }
     }
 

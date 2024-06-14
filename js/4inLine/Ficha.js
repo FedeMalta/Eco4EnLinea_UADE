@@ -105,7 +105,7 @@ class Ficha {
 
     //Setea las coordenadas x e y de la ficha al moverla por el canvas
     move(x, y, e) {
-        if (x > this.r && x < (1150 - this.r) && y > this.r && y < (580 - this.r)) {
+        if (x > this.r && x < (board.width - this.r) && y > this.r && y < (580 - this.r)) {
             this.posX = x - this.r;
             this.posY = y - this.r;
         }

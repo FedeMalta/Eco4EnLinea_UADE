@@ -72,7 +72,7 @@ class Juego {
 
     //Limpia el canvas
     clearCanvas() {
-        ctx.clearRect(0, 0, 1150, 580);
+        ctx.clearRect(0, 0, board.width, 580);
     }
 
     //Crea el tablero con una imagen de la casilla en cada posición
@@ -233,14 +233,14 @@ class Juego {
     endGame(player) {
         ctx.font = "40px Poppins";
         ctx.fillStyle = "rgba(145, 191, 143, 0.8)";
-        ctx.fillRect(0, 0, 1150, 580);
+        ctx.fillRect(0, 0, board.width, board.height);
         ctx.fillStyle = "rgba(60, 130, 58, 1)";
         if (player != null) {
-            ctx.fillText("WINNER", 480, 250);
-            ctx.fillText(player.getName(), 480, 300);
+            ctx.fillText("WINNER", board.width/2 - 100, 250);
+            ctx.fillText(player.getName(), board.width/2 - 100, 300);
         } else {
-            ctx.fillText("GAME OVER", 450, 300);
-            ctx.fillText("Time out", 480, 250);
+            ctx.fillText("GAME OVER", board.width/2 - 100, 300);
+            ctx.fillText("Time out", board.width/2 - 100, 250);
         }
     }
 
@@ -249,8 +249,8 @@ class Juego {
         this.clearCanvas();
         //drawNames
         ctx.font = "15px Poppins";
-        ctx.fillText(this.player1.getName(), 110, 25);
-        ctx.fillText(this.player2.getName(), board.width - 240, 25);
+        ctx.fillText(this.player1.getName(), 50, 25);
+        ctx.fillText(this.player2.getName(), board.width - 100, 25);
         //drawBoard
         let mitadTablero = (this.num / 2) * 50;
         let posX = (board.width / 2) - mitadTablero - 12;
